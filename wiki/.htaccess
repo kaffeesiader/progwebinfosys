@@ -1,0 +1,29 @@
+
+RewriteEngine on
+
+# Rules for wiki titles
+RewriteRule ^title/([^/]+)/{0,1}$		index.php?title=$1
+RewriteRule ^title/([^/]+)/edit$ 		index.php?title=$1&action=editTitle
+RewriteRule ^title/([^/]+)/delete$		index.php?title=$1&action=deleteTitle
+
+# Rules for user management
+RewriteRule ^user/add$ 					index.php?action=editUser
+RewriteRule ^user/(\w+)/edit$ 			index.php?name=$1&action=editUser
+RewriteRule ^user/(\w+)/delete$ 		index.php?name=$1&action=deleteUser
+
+# Rules for session management
+RewriteRule ^unregister$				logout.php
+RewriteRule ^auth/{0,1}$				login.php
+RewriteRule ^auth(.+)$					login.php?redirect=$1
+
+# Rules for settings
+RewriteRule ^settings$					index.php?action=editSettings
+
+# Rules for search
+RewriteRule ^search/([^/]+)$			index.php?query=$1action=searchTitle
+RewriteRule ^search/([^/]+)/(\d+)$		index.php?query=$1&wikipage=$2&action=searchTitle
+
+# Rewrite rule for everything else
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^(.+)$ 				index.php?title=$1

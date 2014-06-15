@@ -1,0 +1,6 @@
+# eclipse files
+.project
+.settings
+.jshintrc
+
+node_modules

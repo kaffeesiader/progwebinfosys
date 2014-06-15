@@ -1,0 +1,40 @@
+html {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	height: 100%;
+	position: relative;
+}
+
+address {
+	text-align: center; /* zentrieren */
+	font-size: 1.1em;
+	font-style: italic; /* normale Schrift, nicht kursiv */
+	line-height: 1.5; /* Zeilenabstand, ohne Einheit */
+	color: gray;
+}
+
+#content {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	padding-top: 50px;
+	padding-bottom: 40px;
+}
+#map {
+	width: 100%;
+	height: 100%;
+}
+
+#footer {
+    background-color: #F5F5F5;
+    bottom: 0;
+    height: 40px;
+    position: absolute;
+    width: 100%;
+    padding-top: 10px;
+}

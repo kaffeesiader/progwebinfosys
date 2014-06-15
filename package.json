@@ -1,0 +1,16 @@
+{
+  "name": "node_server",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "test": "node test_mongodb.js",
+    "import": "node import.js"
+  },
+  "dependencies": {
+    "express": "3.2.6",
+    "socket.io": "^1.0.2",
+    "mongojs": "*",
+    "mongoose": "*"
+  }
+}
